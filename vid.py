@@ -22,6 +22,9 @@ class VideoApp:
         self.btn_stop = tk.Button(window, text="Stop", width=10, command=self.stop_video)
         self.btn_stop.pack()
 
+        self.btn_save = tk.Button(window, text="Save Frame", width=10, command=self.save_frame)
+        self.btn_save.pack()
+
         self.threshold_slider = tk.Scale(window, from_=0, to=255, orient=tk.HORIZONTAL, label="Threshold",
                                          command=self.update_threshold)
         self.threshold_slider.set(100)  # Initial threshold value
@@ -50,6 +53,12 @@ class VideoApp:
 
     def stop_video(self):
         self.is_playing = False
+
+    def save_frame(self):
+        ret, frame = self.cap.read()
+        if ret:
+            cv2.imwrite("saved_frame.jpg", frame)
+            print("Frame saved as 'saved_frame.jpg'")
 
     def update_threshold(self, value):
         # Threshold slider callback function
