@@ -10,7 +10,7 @@ The Video Processing App is a Python application built using the tkinter GUI lib
 - **Start/Stop Controls:** Buttons to start and stop video playback.
 - **Image Processing:** Apply image processing operations such as grayscale conversion and thresholding to video frames.
 - **Threshold Adjustment:** Slider control to adjust the threshold value for image processing.
-- **Save Frame:** Save the current video frame as an image.
+- **Save Frame:** Save the processed video frame as an image.
 
 ## Requirements
 
@@ -38,7 +38,7 @@ The Video Processing App is a Python application built using the tkinter GUI lib
 3. Click the "Start" button to begin video playback.
 4. Adjust the threshold slider to apply image processing effects to the video frames.
 5. Click the "Stop" button to pause video playback.
-6. Click the "Save Frame" button to save the current video frame as an image (`saved_frame.jpg`).
+6. Click the "Save Frame" button to save the current video frame as an image (`processed_frame.jpg`).
 
 
 
