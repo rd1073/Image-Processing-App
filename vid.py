@@ -57,8 +57,9 @@ class VideoApp:
     def save_frame(self):
         ret, frame = self.cap.read()
         if ret:
-            cv2.imwrite("saved_frame.jpg", frame)
-            print("Frame saved as 'saved_frame.jpg'")
+            processed_frame = self.process_frame(frame)
+            cv2.imwrite("processed_frame.jpg", processed_frame)
+            print("Processed frame saved as 'processed_frame.jpg'")
 
     def update_threshold(self, value):
         # Threshold slider callback function
